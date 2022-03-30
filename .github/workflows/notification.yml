@@ -6,14 +6,20 @@ name: Notify about commit streak
 on:
   schedule:
     # Runs at 14:00 UTC every day." (see https://crontab.guru)
-    - cron: '0 14 * * *'
+#     - cron: '0 14 * * *'
+    - cron: '50 11 * * *'
 
 jobs:
   push:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
     steps:
+    # Check if commit has been made
+    - name: Check if commit has been made
+      run: python ./main.py
+    
+    
+    # Send the notification
     - name: Send Push Notification
       uses: techulus/push-github-action@v1.0.0
       env:
