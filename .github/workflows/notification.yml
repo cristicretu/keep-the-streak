@@ -6,7 +6,7 @@ name: Notify about commit streak
 on:
   schedule:
     # Runs "at minute 55 past every hour" (see https://crontab.guru)
-    - cron: '55 * * * *'
+    - cron: '1 * * * *'
 
 jobs:
   push:
@@ -20,7 +20,7 @@ jobs:
     
     # Send the notification
     - name: Send Push Notification
-      uses: techulus/push-github-action@v1.0.0
+      uses: techulus/push-github-action@1.0.0
       env:
         API_KEY: ${{ secrets.PUSH_API_KEY }}
         MESSAGE: "You haven't commited today. Don't lose your commit streak 🚀"
