@@ -5,9 +5,8 @@ name: Notify about commit streak
 # Controls when the workflow will run
 on:
   schedule:
-    # Runs at 14:00 UTC every day." (see https://crontab.guru)
-#     - cron: '0 14 * * *'
-    - cron: '50 11 * * *'
+    # Runs "at minute 55 past every hour" (see https://crontab.guru)
+    - cron: '55 * * * *'
 
 jobs:
   push:
