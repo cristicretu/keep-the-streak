@@ -24,7 +24,9 @@ today = datetime.date.today()
 stringday = today.strftime("%Y-%m-%d")
 
 # Get today's contributions
-result = soup.find_all("rect", {"data-date": stringday})[0]["data-count"]
+result = soup.find("rect", {"data-date": stringday})["data-count"]
+
+print(result)
 
 if result != "0":
   sys.exit(os.EX_OK)
