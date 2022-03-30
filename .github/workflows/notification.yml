@@ -6,7 +6,7 @@ name: Notify about commit streak
 on:
   schedule:
     # Runs "at minute 55 past every hour" (see https://crontab.guru)
-    - cron: '1 * * * *'
+    - cron: '05 12 * * *'
 
 jobs:
   push:
