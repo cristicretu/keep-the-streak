@@ -3,7 +3,7 @@
 Small GitHub Action that notifies the user when he hasn't commited in a particular day, in order to keep the streak. (Who want to lose a commit streak?)
 
 # How to use
-Fork this repository, or hit `Use as template`.
+Fork this repository, or hit `Use this template`.
 
 Paste your GitHub Profile Url, like [https://github.com/cristicretu](https://github.com/cristicretu). This is used to crawl the page and get the number of commits for today.
 > /url.txt
