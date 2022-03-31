@@ -26,9 +26,8 @@ stringday = today.strftime("%Y-%m-%d")
 # Get today's contributions
 result = soup.find("rect", {"data-date": stringday})["data-count"]
 
-print(result)
-
-if result != "0":
+if result == "0":
   sys.exit(os.EX_OK)
 else:
-  sys.exit(errno.ECANCELED) 
+  sys.exit(errno.ECANCELED)
+
