@@ -8,8 +8,8 @@ headers = {
     "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                   'Chrome/42.0.2311.135 Safari/537.36 Edge/12.246'}
 
-f = open("url.txt", "r")
-url = f.read()
+# Change this with your url
+url = "https://github.com/cristicretu"
 
 # Get the page
 req = requests.get(url, headers=headers)
