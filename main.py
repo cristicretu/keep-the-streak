@@ -8,15 +8,12 @@ headers = {
     "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                   'Chrome/42.0.2311.135 Safari/537.36 Edge/12.246'}
 
-# Change this to your own url
-url = "https://www.github.com/cristicretu"
+f = open("url.txt", "r")
+url = f.read()
 
 # Get the page
 req = requests.get(url, headers=headers)
 soup = BeautifulSoup(req.text, "html.parser")
-
-# Beautify the response
-beauty = soup.prettify()
 
 # Get today's date
 today = datetime.date.today()
