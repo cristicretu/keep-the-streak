@@ -5,7 +5,7 @@ Small GitHub Action that notifies the user when he hasn't commited in a particul
 # How to use
 Fork this repository, or hit `Use this template`.
 
-Paste your GitHub Profile Url, like [https://github.com/cristicretu](https://github.com/cristicretu). This is used to crawl the page and get the number of commits for today.
+Paste your GitHub Profile URL, like [https://github.com/cristicretu](https://github.com/cristicretu). This is used to crawl the page and get the number of commits for today.
 > /url.txt
 
 The GitHub Action runs every day at 13:30 UTC, change it to whatever time you want
