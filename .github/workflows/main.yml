@@ -31,16 +31,7 @@ jobs:
     - name: Verify Commit Status for this day
       run: |
         python ./main.py
-    
-    # Temporal change, commits on my behalf
-    - name: Commit report
-      run:
-        git config --global user.name 'Cristi'
-        git config --global user.email 'crisemcr@gmail.com'
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        echo "saved" >> commits.txt
-        git commit -am "save commit streak"
-        git push
+
       # Runs a set of commands using the runners shell
     - name: Send Push Notification
       uses: techulus/push-github-action@v0.0.2
