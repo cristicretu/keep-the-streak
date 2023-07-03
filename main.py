@@ -1,7 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
 import datetime
-import sys, os, errno
+import sys
+import os
+import errno
 
 # Config
 headers = {
@@ -9,7 +11,7 @@ headers = {
                   'Chrome/42.0.2311.135 Safari/537.36 Edge/12.246'}
 
 # Change this with your url
-url = "https://github.com/914maiereanmircea"
+url = "https://github.com/mirceamaierean"
 
 # Get the page
 req = requests.get(url, headers=headers)
@@ -23,9 +25,8 @@ stringday = today.strftime("%Y-%m-%d")
 # Get today's contributions
 result = soup.find("rect", {"data-date": stringday})
 
-
+print(result)
 if result["data-level"] == "0":
-  sys.exit(os.EX_OK)
+    sys.exit(os.EX_OK)
 else:
-  sys.exit(errno.ECANCELED)
-
+    sys.exit(errno.ECANCELED)
