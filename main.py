@@ -1,7 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
 import datetime
-import sys, os, errno
+import sys
+import os
+import errno
 
 # Config
 headers = {
@@ -21,11 +23,9 @@ today = datetime.date.today()
 stringday = today.strftime("%Y-%m-%d")
 
 # Get today's contributions
-result = soup.find("rect", {"data-date": stringday})
-
+result = soup.find("td", {"data-date": stringday})
 
 if result["data-level"] == "0":
-  sys.exit(os.EX_OK)
+    sys.exit(os.EX_OK)
 else:
-  sys.exit(errno.ECANCELED)
-
+    sys.exit(errno.ECANCELED)
